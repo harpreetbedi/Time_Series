@@ -1,0 +1,14 @@
+data(AirPassengers)
+ap=AirPassengers
+ap
+class(ap)
+plot(ap,col=c("blue"))
+plot(decompose(ap))
+ap.decom=decompose(ap,type="mult")
+plot(ap.decom)
+trend=ap.decom$trend
+trend
+seasonal=ap.decom$seasonal
+seasonal
+ts.plot(cbind(trend,trend*seasonal),lty=1:2)
+plot(stl(ap,"periodic"))

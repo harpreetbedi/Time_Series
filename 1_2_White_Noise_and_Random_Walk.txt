@@ -1,0 +1,5 @@
+w=rnorm(200)
+x=cumsum(w)
+plot.ts(w, col="blue")
+plot.ts(x, col="red")
+plot.ts(cumsum(rnorm(200)), col="red")
